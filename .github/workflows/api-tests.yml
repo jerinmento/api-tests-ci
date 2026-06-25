@@ -36,7 +36,7 @@ jobs:
           newman run "tests/Collection" \
           --reporters cli,htmlextra \
           --reporter-htmlextra-export "test-results/newman-report.html" \
-          --env env.json
+          --environment env.json
 
       - name: Show generated report files
         if: always()

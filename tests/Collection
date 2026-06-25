@@ -7,7 +7,7 @@
   },
   "item": [
     {
-      "name": "Random Dog Image",
+      "name": "Multiple Dog Images",
       "request": {
         "method": "GET",
         "header": []
@@ -15,10 +15,44 @@
       "response": []
     },
     {
-      "name": "Multiple Dog Images",
+      "name": "Random Dog Image",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "\r",
+              "\r",
+              "pm.test(\"API status is success\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    console.log(\"full response\", jsonData);\r",
+              "    pm.expect(jsonData.status).to.eql('success');\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}api/breeds/image/random",
+          "host": [
+            "{{base_url}}api"
+          ],
+          "path": [
+            "breeds",
+            "image",
+            "random"
+          ]
+        }
       },
       "response": []
     }

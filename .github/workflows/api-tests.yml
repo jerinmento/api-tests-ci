@@ -32,7 +32,7 @@ jobs:
         id: newman
         continue-on-error: true
         run: |
-          newman run "Collection.json" \
+          newman run "tests/Collection.json" \
             --reporters cli,htmlextra \
             --reporter-htmlextra-export "test-results/newman-report.html"
 

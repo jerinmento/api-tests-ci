@@ -34,7 +34,8 @@ jobs:
         run: |
           newman run "tests/Collection" \
             --reporters cli,htmlextra \
-            --reporter-htmlextra-export "test-results/newman-report.html"
+            --reporter-htmlextra-export "test-results/newman-report.html" \
+            --env <(echo '{"base_url": "https://dog.ceo/api/"}')
 
       - name: Show generated report files
         if: always()

@@ -1,4 +1,4 @@
-name: API Tests - Postman Collection
+name: Postman API Tests
 
 on:
   push:
@@ -17,22 +17,39 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Newman
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install Newman and HTML reporter
         run: npm install -g newman newman-reporter-htmlextra
 
-      - name: Create test-results folder
+      - name: Create test results folder
         run: mkdir -p test-results
 
       - name: Run Postman collection
+        id: newman
+        continue-on-error: true
         run: |
-          newman run Collection.json \
+          newman run "Collection.json" \
             --reporters cli,htmlextra \
-            --reporter-htmlextra-export test-results/newman-report.html \
-            --bail
+            --reporter-htmlextra-export "test-results/newman-report.html"
+
+      - name: Show generated report files
+        if: always()
+        run: |
+          echo "Test result files:"
+          ls -la test-results || true
 
       - name: Upload Newman HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: postman-api-test-report
-          path: test-results/newman-report.html
+          path: test-results/
+          if-no-files-found: warn
+
+      - name: Fail workflow if API tests failed
+        if: steps.newman.outcome == 'failure'
+        run: exit 1

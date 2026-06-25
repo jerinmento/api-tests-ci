@@ -1,0 +1,104 @@
+{
+  "info": {
+    "_postman_id": "1e96025e-9f9a-404d-9ed0-101967c057d9",
+    "name": "Dog API Project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9859062"
+  },
+  "item": [
+    {
+      "name": "Random Dog Image",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Multiple Dog Images",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "https://automation.omron.com/country-codes.json",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-IN,en-US;q=0.9,en;q=0.8"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "referer",
+            "value": "https://automation.omron.com/en/us/solutions/sysmac-platform/"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-origin"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          {
+            "key": "Cookie",
+            "value": "_gcl_au=1.1.886307168.1781219484; roll-up_ga=GA1.1.209264914.1781219484; _fbp=fb.1.1781219484295.429742518784623321; hubspotutk=f12761698838a1a90109e9f4f8dcb4c5; OptanonAlertBoxClosed=2026-06-11T23:11:26.777Z; AMCVS_7FCC6D075DDD2B730A495C72%40AdobeOrg=1; AMCV_7FCC6D075DDD2B730A495C72%40AdobeOrg=179643557%7CMCIDTS%7C20629%7CMCMID%7C23714708639830193552782996322185752728%7CMCAAMLH-1782914875%7C9%7CMCAAMB-1782914875%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1782317275s%7CNONE%7CvVersion%7C5.5.0; _gid=GA1.2.1169599915.1782310076; s_ips=695; s_cc=true; __hstc=194085874.f12761698838a1a90109e9f4f8dcb4c5.1781219485041.1781219485041.1782310076716.2; __hssrc=1; QSI_HistorySession=https%3A%2F%2Fautomation.omron.com%2Fen%2Fus%2F~1782310077173; __hssc=194085874.2.1782310076716; s_tp=5294; _ga=GA1.2.209264914.1781219484; s_ppv=automationcom%253Aen%253Aus%253Aindex%2C28%2C13%2C1467.7999877929688%2C2%2C7; _dc_gtm_UA-131227940-1=1; _ga_24V04SGVCX=GS2.1.s1782310076$o2$g1$t1782310244$j58$l0$h0; s_sq=%5B%5BB%5D%5D; roll-up_ga_2MM5L1G062=GS2.1.s1782310075$o2$g1$t1782310247$j55$l0$h0; OptanonConsent=isGpcEnabled=0&datestamp=Wed+Jun+24+2026+07%3A10%3A47+GMT-0700+(Pacific+Daylight+Time)&version=202509.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=5bb04d75-9f82-4e54-a554-e6ff64044869&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0003%3A1%2CSPD_BG%3A1%2CC0002%3A1%2CC0004%3A1%2CC0005%3A1&intType=undefined&geolocation=US%3BCA&AwaitingReconsent=false"
+          }
+        ],
+        "url": {
+          "raw": "https://automation.omron.com/country-codes.json",
+          "protocol": "https",
+          "host": [
+            "automation",
+            "omron",
+            "com"
+          ],
+          "path": [
+            "country-codes.json"
+          ]
+        },
+        "description": "Generated from cURL: curl 'https://automation.omron.com/country-codes.json' \\\r\n  -H 'accept: application/json, text/plain, */*' \\\r\n  -H 'accept-language: en-IN,en-US;q=0.9,en;q=0.8' \\\r\n  -b '_gcl_au=1.1.886307168.1781219484; roll-up_ga=GA1.1.209264914.1781219484; _fbp=fb.1.1781219484295.429742518784623321; hubspotutk=f12761698838a1a90109e9f4f8dcb4c5; OptanonAlertBoxClosed=2026-06-11T23:11:26.777Z; AMCVS_7FCC6D075DDD2B730A495C72%40AdobeOrg=1; AMCV_7FCC6D075DDD2B730A495C72%40AdobeOrg=179643557%7CMCIDTS%7C20629%7CMCMID%7C23714708639830193552782996322185752728%7CMCAAMLH-1782914875%7C9%7CMCAAMB-1782914875%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1782317275s%7CNONE%7CvVersion%7C5.5.0; _gid=GA1.2.1169599915.1782310076; s_ips=695; s_cc=true; __hstc=194085874.f12761698838a1a90109e9f4f8dcb4c5.1781219485041.1781219485041.1782310076716.2; __hssrc=1; QSI_HistorySession=https%3A%2F%2Fautomation.omron.com%2Fen%2Fus%2F~1782310077173; __hssc=194085874.2.1782310076716; s_tp=5294; _ga=GA1.2.209264914.1781219484; s_ppv=automationcom%253Aen%253Aus%253Aindex%2C28%2C13%2C1467.7999877929688%2C2%2C7; _dc_gtm_UA-131227940-1=1; _ga_24V04SGVCX=GS2.1.s1782310076$o2$g1$t1782310244$j58$l0$h0; s_sq=%5B%5BB%5D%5D; roll-up_ga_2MM5L1G062=GS2.1.s1782310075$o2$g1$t1782310247$j55$l0$h0; OptanonConsent=isGpcEnabled=0&datestamp=Wed+Jun+24+2026+07%3A10%3A47+GMT-0700+(Pacific+Daylight+Time)&version=202509.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=5bb04d75-9f82-4e54-a554-e6ff64044869&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0003%3A1%2CSPD_BG%3A1%2CC0002%3A1%2CC0004%3A1%2CC0005%3A1&intType=undefined&geolocation=US%3BCA&AwaitingReconsent=false' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://automation.omron.com/en/us/solutions/sysmac-platform/' \\\r\n  -H 'sec-ch-ua: \"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'"
+      },
+      "response": []
+    }
+  ]
+}

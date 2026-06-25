@@ -32,10 +32,11 @@ jobs:
         id: newman
         continue-on-error: true
         run: |
+          echo '{"base_url": "https://dog.ceo/api/"}' > env.json
           newman run "tests/Collection" \
-            --reporters cli,htmlextra \
-            --reporter-htmlextra-export "test-results/newman-report.html" \
-            --env <(echo '{"base_url": "https://dog.ceo/api/"}')
+          --reporters cli,htmlextra \
+          --reporter-htmlextra-export "test-results/newman-report.html" \
+          --env env.json
 
       - name: Show generated report files
         if: always()

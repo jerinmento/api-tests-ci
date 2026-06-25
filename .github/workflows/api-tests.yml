@@ -1,0 +1,38 @@
+name: API Tests - Postman Collection
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  postman-api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Newman
+        run: npm install -g newman newman-reporter-htmlextra
+
+      - name: Create test-results folder
+        run: mkdir -p test-results
+
+      - name: Run Postman collection
+        run: |
+          newman run Collection.json \
+            --reporters cli,htmlextra \
+            --reporter-htmlextra-export test-results/newman-report.html \
+            --bail
+
+      - name: Upload Newman HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: postman-api-test-report
+          path: test-results/newman-report.html
